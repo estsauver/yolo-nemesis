@@ -12,11 +12,12 @@ S_actual=sim_data(:,4);
 T=sim_data(:,1);
 F=sim_data(:,2);
 
+%Number of Params in genetic algorithim
 J = 14;
 
 %Set bounds of weights
 f_bounds=zeros(J, 2);
-f_bounds(:,1)=-5;
+f_bounds(:,1)=0;
 f_bounds(:,2)=5;
 
 %Set population parameters

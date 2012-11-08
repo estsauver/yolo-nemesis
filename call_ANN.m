@@ -4,14 +4,23 @@ global F X_actual
 
 N_t = length(X_actual);
 
-
-W1 = [w_vector(1:4); w_vector(5:8)];
-W2 = [w_vector(9:11); w_vector(12:14)];
 X=zeros(length(F),1);
 S=X;
 X(1) = 0.5;
 S(1) = 0.5;
 
+net = network
+net.numInputs = 3;
+net.numLayers = 2;
+net.biasConnect = [1; 1; 1];
+net.inputConnect(1,1)=1;
+net.inputConnect(1,2)=1;
+net.inputConnect(1,3)=1;
+net.layerConnect =[0 0;
+					1 0;];
+net.outputConnect = [0 1];
+net.layers{1}.size = w_vector[1]
+net.layers{2}.size = w_vector[2]
 for t = 2:N_t;
     Z0 = [F(t-1); X(t-1); S(t-1); 1];
     Z1 = W1*Z0;
