@@ -2,6 +2,8 @@ function [  ] = ploterize( t,C,n )
 %UNTITLED4 Summary of this function goes here
 %   Detailed explanation goes here
 
+
+%testcom
 figure(n)
 subplot(2,3,1)
 plot(t,C(:,1))
