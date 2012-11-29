@@ -3,7 +3,6 @@ function [  ] = ploterize( t,C,n )
 %   Detailed explanation goes here
 
 
-%testcom
 figure(n)
 subplot(2,3,1)
 plot(t,C(:,1))
